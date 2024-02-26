@@ -11,6 +11,7 @@ namespace MenuProject.ViewModels
     {
         private readonly EducationLevelsRepo _educationLevelsRepo = new();
         private readonly StudentRepo _studentRepo = new();
+        private int _numberOfStudent = 0;
 
         [ObservableProperty]
         private ObservableCollection<string> _educationLevels = new();
@@ -28,8 +29,8 @@ namespace MenuProject.ViewModels
         {
             _selectedStudent = new Student();
             Update();
-            int numberOfStudent = _studentRepo.GetNumberOfStudents();
-            StatusBarText = $"{numberOfStudent} diák adatok betöltve.";
+            _numberOfStudent = _studentRepo.GetNumberOfStudents();
+            StatusBarText = $"{_numberOfStudent} diák adatok betöltve.";
         }
 
         [RelayCommand]
@@ -67,6 +68,7 @@ namespace MenuProject.ViewModels
         {
             EducationLevels = new ObservableCollection<string>(_educationLevelsRepo.FindAll());
             Students = new ObservableCollection<Student>(_studentRepo.FindAll());
+            
         }
     }
 }
