@@ -19,12 +19,16 @@ namespace MenuProject.ViewModels
         private ObservableCollection<Student> _students = new();
 
         [ObservableProperty]
-        private Student _selectedStudent;        
+        private Student _selectedStudent;
+
+        [ObservableProperty]
+        private string _statusBarText = string.Empty;
         
         public StudentViewModel()
         {
             _selectedStudent = new Student();
             Update();
+            StatusBarText = "A diák adatok betöltve.";
         }
 
         [RelayCommand]
