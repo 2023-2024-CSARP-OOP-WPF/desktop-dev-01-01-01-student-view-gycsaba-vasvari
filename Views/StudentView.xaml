@@ -91,6 +91,9 @@
               SelectedItem="{Binding SelectedStudent}"
         />
         <StatusBar Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2">
+            <StatusBarItem>
+                <TextBlock>A diák adatok betöltve.</TextBlock>
+            </StatusBarItem>
         </StatusBar>
     </Grid>
 </UserControl>
