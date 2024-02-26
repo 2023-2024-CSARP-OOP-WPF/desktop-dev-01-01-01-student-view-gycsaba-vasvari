@@ -98,6 +98,9 @@ namespace Kreta.Desktop.Repos
             _students.Remove(student);
         }
 
-
+        public int GetNumberOfStudents()
+        {
+            return FindAll().Count();
+        }
     }
 }
