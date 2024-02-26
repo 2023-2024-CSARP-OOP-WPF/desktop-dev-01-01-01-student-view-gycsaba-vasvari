@@ -35,7 +35,10 @@ namespace MenuProject.ViewModels
         public void DoSave(Student student)
         {
             if (student.HasId)
+            {
                 _studentRepo.Update(student);
+                StatusBarText = "A diák adata frissítve lett!";
+            }
             else
                 _studentRepo.Insert(student);
             Update();
