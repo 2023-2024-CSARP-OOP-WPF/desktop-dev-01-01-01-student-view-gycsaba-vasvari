@@ -28,7 +28,8 @@ namespace MenuProject.ViewModels
         {
             _selectedStudent = new Student();
             Update();
-            StatusBarText = "A diák adatok betöltve.";
+            int numberOfStudent = _studentRepo.GetNumberOfStudents();
+            StatusBarText = $"{numberOfStudent} diák adatok betöltve.";
         }
 
         [RelayCommand]
