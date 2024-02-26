@@ -92,7 +92,11 @@
         />
         <StatusBar Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2">
             <StatusBarItem>
-                <TextBlock Text="{Binding StatusBarText}"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Diákok száma: </TextBlock>
+                    <TextBlock Margin="0 0 20 0" Text="{Binding NumberOfStudent}"></TextBlock>
+                    <TextBlock Text="{Binding StatusBarText}"></TextBlock>
+                </StackPanel>
             </StatusBarItem>
         </StatusBar>
     </Grid>
