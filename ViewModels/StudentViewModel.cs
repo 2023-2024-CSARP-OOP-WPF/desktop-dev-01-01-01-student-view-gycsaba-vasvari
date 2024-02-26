@@ -70,7 +70,7 @@ namespace MenuProject.ViewModels
         {
             EducationLevels = new ObservableCollection<string>(_educationLevelsRepo.FindAll());
             Students = new ObservableCollection<Student>(_studentRepo.FindAll());
-            
+            NumberOfStudent = _studentRepo.GetNumberOfStudents() ;
         }
     }
 }
