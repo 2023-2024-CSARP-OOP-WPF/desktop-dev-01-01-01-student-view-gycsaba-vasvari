@@ -45,6 +45,7 @@ namespace MenuProject.ViewModels
         void DoNewStudent()
         {
             SelectedStudent = new Student();
+            StatusBarText = "Adja meg az új diák adatait!";
         }
 
         [RelayCommand]
