@@ -52,6 +52,7 @@ namespace MenuProject.ViewModels
         {
             _studentRepo.Delete(studentToDelete);
             Update();
+            StatusBarText = $"{studentToDelete.HungarianName} törölve lett.";
         }
 
         private void Update()
