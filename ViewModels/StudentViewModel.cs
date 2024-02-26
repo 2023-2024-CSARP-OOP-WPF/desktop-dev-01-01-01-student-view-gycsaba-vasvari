@@ -40,7 +40,10 @@ namespace MenuProject.ViewModels
                 StatusBarText = "A diák adata frissítve lett!";
             }
             else
+            {
                 _studentRepo.Insert(student);
+                StatusBarText = "Új diák adata mentésre került!";
+            }
             Update();
         }
 
